@@ -8,8 +8,8 @@ Here are some of the samples obtained after renders
 
 ### Cornell Box
 
-| Standard Cornell Box | Cornell Box Volumetric |
-|:--------------------:|:---------------------------:|
+| Cornell Box - Standard | Cornell Box - Volumetric |
+|:----------------------:|:------------------------:|
 | ![Cornell](samples/cornell.png) | ![Smoked](samples/cornell_smoked.png) |
 
 ### The Next Week Final Scene

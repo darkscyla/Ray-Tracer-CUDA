@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="main.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="ray.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="camera.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sphere.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="lambert.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="metal.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="hittable_list.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="dielectric.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="aabb.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="empty.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="bvh.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sphere_moving.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="solid_texture.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="checker_texture.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="perlin.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="noise_texture.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="image_texture.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="diffuse_light.cuh">
+      <Filter>Header Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="diffuse_light.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="xy_rect.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="colored_noise_texture.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="xz_rect.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="yz_rect.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="box.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="translate.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="rotate_y.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="constant_volume.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="isotropic.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vec3.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rt_utils.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ray.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hittable_list.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hittable.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="material.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lambert.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="metal.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dielectric.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aabb.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="empty.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bvh.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aabb_utils.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere_moving.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="solid_texture.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="checker_texture.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="perlin.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="noise_texture.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene_selector.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="image_texture.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="image_wrapper.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pixel.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xy_rect.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="colored_noise_texture.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xz_rect.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yz_rect.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="box.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="translate.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rotate_y.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constant_volume.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="isotropic.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{51f6b9ee-12c1-4de4-8de5-c073ee333e39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3070a14b-05ce-42bf-baf0-1933d66f7b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hint File">
+      <UniqueIdentifier>{7022fa6b-6512-43c1-91f1-580d4a20b96a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint">
+      <Filter>Hint File</Filter>
+    </None>
+  </ItemGroup>
+</Project>

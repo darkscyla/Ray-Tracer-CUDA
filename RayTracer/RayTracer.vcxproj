@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{17B782BB-7D22-4AB6-857B-BAC84615A5E5}</ProjectGuid>
+    <RootNamespace>RayTracer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Setup\OpenCV\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);E:\Setup\OpenCV\opencv\build\x64\vc15\lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Setup\OpenCV\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);E:\Setup\OpenCV\opencv\build\x64\vc15\lib</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;cudadevrt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opencv_world440d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>E:\Setup\OpenCV\opencv\build\include;%(Include)</Include>
+      <CodeGeneration>compute_75,sm_75</CodeGeneration>
+      <AdditionalCompilerOptions>/openmp</AdditionalCompilerOptions>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <AdditionalOptions>--extended-lambda -lineinfo -g %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <CudaLink />
+    <CudaLink />
+    <CudaLink />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;cudadevrt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opencv_world440.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>E:\Setup\OpenCV\opencv\build\include;%(Include)</Include>
+      <CodeGeneration>compute_75,sm_75</CodeGeneration>
+      <AdditionalCompilerOptions>/openmp</AdditionalCompilerOptions>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <AdditionalOptions>--extended-lambda -lineinfo -g %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <CudaLink />
+    <CudaLink />
+    <CudaLink />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CudaCompile Include="aabb.cu" />
+    <CudaCompile Include="box.cu" />
+    <CudaCompile Include="bvh.cu" />
+    <CudaCompile Include="camera.cu" />
+    <CudaCompile Include="checker_texture.cu" />
+    <CudaCompile Include="colored_noise_texture.cu" />
+    <CudaCompile Include="constant_volume.cu" />
+    <CudaCompile Include="dielectric.cu" />
+    <CudaCompile Include="diffuse_light.cu" />
+    <CudaCompile Include="diffuse_light.cuh" />
+    <CudaCompile Include="empty.cu" />
+    <CudaCompile Include="image_texture.cu" />
+    <CudaCompile Include="isotropic.cu" />
+    <CudaCompile Include="lambert.cu" />
+    <CudaCompile Include="metal.cu" />
+    <CudaCompile Include="noise_texture.cu" />
+    <CudaCompile Include="perlin.cu" />
+    <CudaCompile Include="ray.cu" />
+    <CudaCompile Include="main.cu" />
+    <CudaCompile Include="rotate_y.cu" />
+    <CudaCompile Include="solid_texture.cu" />
+    <CudaCompile Include="sphere_moving.cu" />
+    <CudaCompile Include="translate.cu" />
+    <CudaCompile Include="xy_rect.cu" />
+    <CudaCompile Include="xz_rect.cu" />
+    <CudaCompile Include="yz_rect.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aabb.cuh" />
+    <ClInclude Include="aabb_utils.cuh" />
+    <ClInclude Include="box.cuh" />
+    <ClInclude Include="bvh.cuh" />
+    <ClInclude Include="camera.cuh" />
+    <ClInclude Include="checker_texture.cuh" />
+    <ClInclude Include="colored_noise_texture.cuh" />
+    <ClInclude Include="constant_volume.cuh" />
+    <ClInclude Include="dielectric.cuh" />
+    <ClInclude Include="empty.cuh" />
+    <ClInclude Include="hittable.cuh" />
+    <ClInclude Include="hittable_list.cuh" />
+    <ClInclude Include="image_texture.cuh" />
+    <ClInclude Include="image_wrapper.cuh" />
+    <ClInclude Include="isotropic.cuh" />
+    <ClInclude Include="lambert.cuh" />
+    <ClInclude Include="material.cuh" />
+    <ClInclude Include="metal.cuh" />
+    <ClInclude Include="noise_texture.cuh" />
+    <ClInclude Include="perlin.cuh" />
+    <ClInclude Include="pixel.cuh" />
+    <ClInclude Include="ray.cuh" />
+    <ClInclude Include="rotate_y.cuh" />
+    <ClInclude Include="scene.cuh" />
+    <ClInclude Include="scene_selector.cuh" />
+    <ClInclude Include="solid_texture.cuh" />
+    <ClInclude Include="sphere.cuh" />
+    <ClInclude Include="sphere_moving.cuh" />
+    <ClInclude Include="texture.cuh" />
+    <ClInclude Include="translate.cuh" />
+    <ClInclude Include="vec3.cuh" />
+    <ClInclude Include="rt_utils.cuh" />
+    <ClInclude Include="xy_rect.cuh" />
+    <ClInclude Include="xz_rect.cuh" />
+    <ClInclude Include="yz_rect.cuh" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="hittable_list.cu" />
+    <CudaCompile Include="sphere.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.2.targets" />
+  </ImportGroup>
+</Project>

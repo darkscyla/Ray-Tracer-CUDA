@@ -53,7 +53,7 @@ RT_DEVICE BVH::BVH(Hittable** hittable_objects, const size_t length,
         left_ = new BVH(objects, mid, rand_state, ti, tf);
         right_ = new BVH(objects + mid, length - mid, rand_state, ti, tf);
 
-        //delete[] objects;
+        delete[] objects;
     }
 
     AABB box_left;

@@ -121,8 +121,8 @@ int main()
     constexpr size_t image_height = 1080;
     //constexpr size_t image_height = 10;
     constexpr auto image_width = static_cast<size_t>(image_height * aspect_ratio);
-    constexpr size_t samples_per_pixel = 10;
-    const size_t scene_id = 7;
+    constexpr size_t samples_per_pixel = 1000;
+    const size_t scene_id = 9;
 
     const auto pixels = image_width * image_height;
 

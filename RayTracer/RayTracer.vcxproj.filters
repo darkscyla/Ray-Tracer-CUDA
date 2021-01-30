@@ -208,5 +208,6 @@
     <None Include="cpp.hint">
       <Filter>Hint File</Filter>
     </None>
+    <None Include="..\.gitignore" />
   </ItemGroup>
 </Project>

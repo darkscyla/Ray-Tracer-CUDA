@@ -1,0 +1,7 @@
+# Directories
+.vs/
+x86/
+x64/
+
+# Files
+RayTracer/*.png
